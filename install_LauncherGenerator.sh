@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# git clone https://github.com/bunyamintamar/LauncherGenerator.git ~/Desktop/temp_LauncherGenerator
-# cd ~/Desktop/temp_LauncherGenerator
-# chmod +x install_LauncherGenerator.sh
-# ./install_LauncherGenerator.sh 
-
 sudo echo -----------------------------
 
 # install libGL
@@ -28,15 +23,17 @@ cd ~/Desktop/temp_LauncherGenerator
 
 # change mode to executable
 chmod +x ~/Desktop/temp_LauncherGenerator/BUILD/LauncherGenerator
+chmod +x ~/Desktop/temp_LauncherGenerator/uninstall_LauncherGenerator.sh
 
 # copy files to application folder
 echo -----------------------------
 echo 'STEP 3: copy files application folder'
 echo
-sudo cp ~/Desktop/temp_LauncherGenerator/BUILD/LauncherGenerator      /opt/LauncherGenerator
-sudo cp ~/Desktop/temp_LauncherGenerator/LauncherGenerator/rocket.ico /opt/LauncherGenerator
-sudo cp ~/Desktop/temp_LauncherGenerator/currentVersion               /opt/LauncherGenerator
-sudo cp ~/Desktop/temp_LauncherGenerator/lib/*                        /opt/LauncherGenerator/lib/
+sudo cp ~/Desktop/temp_LauncherGenerator/BUILD/LauncherGenerator         /opt/LauncherGenerator
+sudo cp ~/Desktop/temp_LauncherGenerator/LauncherGenerator/rocket.ico    /opt/LauncherGenerator
+sudo cp ~/Desktop/temp_LauncherGenerator/currentVersion                  /opt/LauncherGenerator
+sudo cp ~/Desktop/temp_LauncherGenerator/uninstall_LauncherGenerator.sh  /opt/LauncherGenerator
+sudo cp ~/Desktop/temp_LauncherGenerator/lib/*                           /opt/LauncherGenerator/lib/
 
 # create links
 echo -----------------------------
