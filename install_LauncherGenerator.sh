@@ -35,6 +35,7 @@ echo 'STEP 3: copy files application folder'
 echo
 sudo cp ~/Desktop/temp_LauncherGenerator/BUILD/LauncherGenerator      /opt/LauncherGenerator
 sudo cp ~/Desktop/temp_LauncherGenerator/LauncherGenerator/rocket.ico /opt/LauncherGenerator
+sudo cp ~/Desktop/temp_LauncherGenerator/currentVersion               /opt/LauncherGenerator
 sudo cp ~/Desktop/temp_LauncherGenerator/lib/*                        /opt/LauncherGenerator/lib/
 
 # create links
