@@ -1,0 +1,8 @@
+*.o
+/BUILD/*
+*pro.user*
+*.stash
+moc_*.*
+ui_*.*
+Makefile
+makefile
