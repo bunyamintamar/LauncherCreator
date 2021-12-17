@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# wget https://github.com/bunyamintamar/LauncherGenerator.git ~/Desktop/temp_LauncherGenerator
+# git clone https://github.com/bunyamintamar/LauncherGenerator.git ~/Desktop/temp_LauncherGenerator
 # cd ~/Desktop/temp_LauncherGenerator
 # chmod +x install_LauncherGenerator.sh
-# ./install_LauncherGenerator.sh
+# ./install_LauncherGenerator.sh 
 
 sudo echo -----------------------------
 
@@ -23,13 +23,13 @@ cd ~/Desktop/temp_LauncherGenerator
 # change mode to executable
 chmod +x ~/Desktop/temp_LauncherGenerator/BUILD/LauncherGenerator
 
-# copy launcher to /usr/share/applications/
-chmod +x ~/Desktop/temp_LauncherGenerator/Launcher_Generator.desktop
-sudo  cp ~/Desktop/temp_LauncherGenerator/Launcher_Generator.desktop /usr/share/applications/
+# copy files to application folder
+sudo cp ~/Desktop/temp_LauncherGenerator/BUILD/LauncherGenerator      /opt/LauncherGenerator
+sudo cp ~/Desktop/temp_LauncherGenerator/LauncherGenerator/rocket.ico /opt/LauncherGenerator
+sudo cp ~/Desktop/temp_LauncherGenerator/lib/*                        /opt/LauncherGenerator/lib/
 
 # create links
 cd /opt/LauncherGenerator/lib
-sudo cp ~/Desktop/temp_LauncherGenerator/lib/* .
 sudo ln -s libicudata.so.56.1      libicudata.so.56
 sudo ln -s libicudata.so.56        libicudata.so
 sudo ln -s libicui18n.so.56.1      libicui18n.so.56
@@ -45,6 +45,10 @@ sudo ln -s libQt5Gui.so.5          libQt5Gui.so
 sudo ln -s libQt5Widgets.so.5.15.2 libQt5Widgets.so.5.15
 sudo ln -s libQt5Widgets.so.5.15   libQt5Widgets.so.5
 sudo ln -s libQt5Widgets.so.5      libQt5Widgets.so
+
+# copy launcher to /usr/share/applications/
+chmod +x ~/Desktop/temp_LauncherGenerator/Launcher_Generator.desktop
+sudo  cp ~/Desktop/temp_LauncherGenerator/Launcher_Generator.desktop /usr/share/applications/
 
 # remove temporary folder
 sudo rm -r ~/Desktop/temp_LauncherGenerator
