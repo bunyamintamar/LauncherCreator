@@ -1,5 +1,6 @@
 *.o
 /BUILD/*
+!/BUILD/LauncherGenerator
 *pro.user*
 *.stash
 moc_*.*
